@@ -1,0 +1,58 @@
+@import "vars";
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: #000;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px; 
+    background-color: #143861;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #f25a29;
+    border-radius: 9em;
+    box-shadow: inset 1px 1px 10px #4e9bda;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #253861;
+}
+
+.container {
+    width: 1024px;
+    max-width: 100%;
+
+    margin: 0 auto;
+}
+
+.section__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.title {
+    margin: 75px 0;
+
+    font-size: 3em;
+    text-align: center;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Blocks */
+@import "./blocks/intro.scss";
+@import "./blocks/benefits.scss";

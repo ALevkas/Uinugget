@@ -1,33 +1,9 @@
-*,
-*::after,
-*::before {
-    margin: 0;
-    padding: 0;
-    box-shadow: border-box;
-    text-decoration: none;
-    color: #000;
-    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-}
-
-body {
-    overflow: hidden;
-}
-
-.wrapper {
-    background: linear-gradient(to right, #26233bbe, #26233bbe), url("../assets/wallaper.jpg");
-    background-position: center center;
-    background-size: cover;
-}
-
-.container {
-    width: 1024px;
-    max-width: 100%;
-
-    margin: 0 auto;
-}
-
 .intro {
     min-height: 100vh;
+
+    background: linear-gradient(to right, #26233bbe, #26233bbe), url("../img/wallaper.jpg");
+    background-position: center center;
+    background-size: cover;
 }
 
 .header {
@@ -47,8 +23,6 @@ body {
 }
 
 .header a:hover {
-    position: relative;
-
     color: #f25a29;
 }
 
@@ -59,40 +33,36 @@ body {
 .header__menu {
     width: 50%;
 }
+
 .menu {
     display: flex;
     justify-content: space-evenly;
-    font-size: 1rem;
+    font-size: 1rem;   
 }
+
 .menu__item {
     transition: all 0.5s linear;
+    position: relative;
 }
 
 .menu__item::after {
     content: "";
-    width: 100%;
+    width: 0;
     height: 2px;
 
     position: absolute;
 
-    background-color: #f25a29;
+    background-color: #fff;
     left: 0;
     bottom: -5px;
+
+    transition: all .2s linear;
 }
 
-.intro__info {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-
-    height: 65vh;
-}
-
-.intro__title {
-    font-size: 3em;
-    color: #fff;
-    margin: 75px 0;
+.menu__item:hover::after {
+    width: 100%;
+    background-color: #f25a29;
+    transition: all .2s linear;
 }
 
 .btn {
@@ -119,11 +89,18 @@ body {
     text-align: center;
 }
 
+.section__title-intro {
+    height: 65vh;
+}
+.title_intro {
+    color: #fff;
+}
+
 
 @media (max-width: 768px) {
 
-    .wrapper {
-        padding: 18px;
+    .container {
+        padding: 15px;
     }
 
     .header .header__menu  {
@@ -138,7 +115,7 @@ body {
         justify-content: center;
     }
 
-    .intro__title {
+    .title {
         font-size: 2em;
         text-align: center;
     }
