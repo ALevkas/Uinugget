@@ -10,6 +10,12 @@
     color: #000;
 }
 
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
 ::-webkit-scrollbar {
     width: 5px;
     height: 5px; 
@@ -47,12 +53,7 @@
     text-align: center;
 }
 
-body {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1rem;
-    line-height: 1.5;
-}
-
 /* Blocks */
 @import "./blocks/intro.scss";
 @import "./blocks/benefits.scss";
+@import "./blocks/services.scss";
